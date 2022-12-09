@@ -1,0 +1,21 @@
+﻿@model ClientesNutricao.Application.Models.Cliente
+@{
+    ViewBag.Title = "Cliente - Atualizar";
+}
+
+      <form method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="Nome" value="@Model.Nome" class="form-control" id="Nome" placeholder="Digite o nome do cliente" required>
+        <label for="nome">Altura</label>
+        <input type="text" name="Altura" value="@Model.Altura" class="form-control" id="Altura" placeholder="Digite a altura do cliente" required>
+        <label for="nome">Peso</label>
+        <input type="text" name="Peso" value="@Model.Peso" class="form-control" id="Peso" placeholder="Digite o peso do cliente" required>
+        <label for="nome">Data Nascimento</label>
+        <input type="text" name="DataNascimento" value="@Model.DataNascimento" class="form-control" id="DataNascimento" placeholder="Digite a data do nascimento do cliente" required>
+   
+        <button type="submit" style="margin-top: 1pc;" class="btn btn-primary">Salvar</button>
+        <button type="button" onClick="history.go(-1)" style="margin-left: 1pc; margin-top: 1pc;" class="btn btn-dark">Voltar</button>
+
+      </form>
+
+

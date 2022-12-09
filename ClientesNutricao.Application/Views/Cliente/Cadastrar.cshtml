@@ -1,0 +1,21 @@
+﻿@model ClientesNutricao.Application.Models.Cliente
+@{
+    ViewBag.Title = "Cliente - Cadastrar";
+}
+
+      <form method="post">
+        <input type="hidden" name="id" value="@Model.Id"/>
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" name="Nome" value="@Model.Nome" class="form-control" id="Nome" placeholder="Digite o nome do cliente" required>
+        <label for="nome">Altura</label>
+        <input type="text" name="Altura" class="form-control" id="Altura" placeholder="Digite a altura do cliente" required>
+        <label for="nome">Peso</label>
+        <input type="text" name="Peso" class="form-control" id="Peso" placeholder="Digite o peso do cliente" required>
+        <label for="nome">Data Nascimento</label>
+        <input type="text" name="DataNascimento" class="form-control" id="DataNascimento" placeholder="Digite a data do nascimento do cliente" required>
+    </div>
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+
+      </form>

@@ -1,0 +1,46 @@
+﻿@model List<ClientesNutricao.Application.Models.Cliente>
+
+@{
+    ViewBag.Title = "Listagem - Clientes";
+}
+     
+<a href="/cliente/cadastrar" style="margin-bottom: 1pc;" class="btn btn-primary">Cadastrar</a>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome Cliente</th>
+            <th scope="col">Altura</th>
+            <th scope="col">Peso</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Classificação</th>
+            <th scope="col">Ação</th>
+        </tr>
+    </thead>
+<tbody>
+
+        @if (Model == null) { }
+
+        else
+        {
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <th scope="row">@cliente.Id</th>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.Altura</td>
+                    <td>@cliente.Peso</td>
+                    <td>@cliente.Idade</td>
+                    <td>@cliente.Classificacao</td>
+                    <td>
+                        <a href="/cliente/atualizar/@cliente.Id" class="btn">Atualizar</a>
+                        <a href="/cliente/remover/@cliente.Id" class="btn">Excluir</a>
+
+                    </td>
+                </tr>
+            }
+
+        }
+
+</tbody>
+</table>
